@@ -1,0 +1,57 @@
+site_name: Conference
+site_description: PyCon 등의 Python 관련 컨퍼런스 내용을 정리합니다.
+site_url: https://conference.weekwith.me/
+
+theme:
+  name: material
+  palette:
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/brightness-7
+
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
+  features:
+    - navigation.top
+    - navigation.tabs
+    - navigation.tabs.sticky
+  custom_dir: overrides/
+
+plugins:
+  - meta
+  - search
+  - tags
+  - blog:
+      blog_dir: .
+      post_date_format: full
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - md_in_html
+  - attr_list
+  - abbr
+  - footnotes
+
+nav:
+  - index.md
+  - PyCon:
+    - KR:
+      - 2019:
+        - 파이썬의 변수 (강한 타입, Immutable vs Mutable, Class vs Instance) - 조인석: PyCon/KR/2019/su9LkSogAMc.MD
+          

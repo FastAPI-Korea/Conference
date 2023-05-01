@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "conference"
+version = "1"
+description = "PyCon 등의 Python 관련 컨퍼런스 정리"
+authors = ["Taehyun Lee <0417taehyun@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+mkdocs-material = "^9.1.8"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
