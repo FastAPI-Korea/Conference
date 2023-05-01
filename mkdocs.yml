@@ -32,6 +32,8 @@ plugins:
   - meta
   - search
   - tags
+  - rss:
+      comments_path: "#__comments"
   - blog:
       blog_dir: .
       post_date_format: full
