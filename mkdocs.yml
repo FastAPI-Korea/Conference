@@ -53,8 +53,6 @@ markdown_extensions:
 nav:
   - index.md
   - PyCon KR:
-    - PyCon/KR/index.md
     - 2019년:
-      - PyCon/KR/2019/index.md
       - 파이썬의 변수, 조인석: PyCon/KR/2019/su9LkSogAMc.md
         
