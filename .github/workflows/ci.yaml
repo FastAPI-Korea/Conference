@@ -11,15 +11,21 @@ jobs:
     if: github.event.repository.fork == false
     steps:
       - name: 소스 코드 확인
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Python 설치
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v4
         with:
           python-version: 3.x
 
+      - name: 캐시 사용
+        uses: actions/cache@v2
+        with:
+          key: ${{ github.ref }}
+          path: .cache
+
       - name: 웹 페이지 배포를 위한 라이브러리 설치
-        run: pip install git+https://${{secrets.GH_TOKEN}}@github.com/squidfunk/mkdocs-material-insiders.git
+        run: pip install git+https://${secrets.GH_TOKEN}@github.com/squidfunk/mkdocs-material-insiders.git
 
       - name: 웹 페이지 배포
         run: mkdocs gh-deploy --force
