@@ -20,10 +20,12 @@ theme:
       toggle:
         icon: material/brightness-4
         name: Switch to system preference
+        
   features:
     - navigation.top
     - navigation.tabs
     - navigation.tabs.sticky
+    
   custom_dir: overrides/
 
 plugins:
